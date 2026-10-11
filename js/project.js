@@ -148,9 +148,10 @@ App.ready(() => {
   ].map(([k, v]) => `<div><span>${k}</span><strong>${v}</strong></div>`).join("");
 
   /* ----- Team ----- */
-  $("team-grid").innerHTML = TEAM_MEMBERS.map((m, i) => {
+  $("team-grid").innerHTML = `<thead><tr><th>Name</th><th>Role</th></tr></thead><tbody>${TEAM_MEMBERS.map((m, i) => {
     const [first, last] = m.name.split(" ");
     const person = { id: "team" + i, firstName: first, lastName: last || first };
-    return `<div class="card team-member${i === 0 ? " lead" : ""}">${App.avatar(person)}<div><strong>${esc(m.name)}</strong><span>${esc(m.role)}</span></div></div>`;
-  }).join("");
+    const lead = /Owner/.test(m.role);
+    return `<tr class="team-member${lead ? " lead" : ""}"><th scope="row"><span class="team-name">${App.avatar(person, "avatar-sm")}${esc(m.name)}</span></th><td>${lead ? `<span class="badge">${esc(m.role)}</span>` : esc(m.role)}</td></tr>`;
+  }).join("")}</tbody>`;
 });

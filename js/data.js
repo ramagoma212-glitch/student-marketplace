@@ -131,15 +131,15 @@ const SEED_PURCHASES = [
 ];
 
 const TEAM_MEMBERS = [
-  { name: "Nkgai Sedibeng", role: "Group Leader" },
-  { name: "Rasebotsa Antoinette", role: "Team Member" },
-  { name: "Mahonga Mapula", role: "Team Member" },
-  { name: "Tjie Mmatshepo", role: "Team Member" },
-  { name: "Bululu Sinesipho", role: "Team Member" },
-  { name: "Hlahla Motlatso", role: "Team Member" },
-  { name: "Letsatsi Gift", role: "Team Member" },
-  { name: "Mmurwa Pabalelo", role: "Team Member" },
-  { name: "Mokomane Saviour", role: "Team Member" }
+  { name: "Nkgai Sedibeng", role: "Co-Owner" },
+  { name: "Rasebotsa Antoinette", role: "Researcher" },
+  { name: "Mahonga Mapula", role: "Lead Developer" },
+  { name: "Tjie Mmatshepo", role: "Financial Analyst" },
+  { name: "Bululu Sinesipho", role: "UI/UX Designer" },
+  { name: "Hlahla Motlatso", role: "Front-end Developer" },
+  { name: "Letsatsi Gift", role: "Owner" },
+  { name: "Mmurwa Pabalelo", role: "Tester / Quality Assurance" },
+  { name: "Mokomane Saviour", role: "Documentation & Presentation" }
 ];
 
 /* Year 1 financial computations from the project spreadsheet.

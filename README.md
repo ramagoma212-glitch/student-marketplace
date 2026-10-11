@@ -18,15 +18,15 @@ It was built as an academic prototype by **Code & Canvas** using only HTML, CSS 
 
 | Name | Role |
 |------|------|
-| Nkgai Sedibeng | Group Leader |
-| Rasebotsa Antoinette | Team Member |
-| Mahonga Mapula | Team Member |
-| Tjie Mmatshepo | Team Member |
-| Bululu Sinesipho | Team Member |
-| Hlahla Motlatso | Team Member |
-| Letsatsi Gift | Team Member |
-| Mmurwa Pabalelo | Team Member |
-| Mokomane Saviour | Team Member |
+| Nkgai Sedibeng | Co-Owner |
+| Rasebotsa Antoinette | Researcher |
+| Mahonga Mapula | Lead Developer |
+| Tjie Mmatshepo | Financial Analyst |
+| Bululu Sinesipho | UI/UX Designer |
+| Hlahla Motlatso | Front-end Developer |
+| Letsatsi Gift | Owner |
+| Mmurwa Pabalelo | Tester / Quality Assurance |
+| Mokomane Saviour | Documentation & Presentation |
 
 ---
 
