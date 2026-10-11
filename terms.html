@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms &amp; Conditions | Student Market Place</title>
+  <meta name="description" content="Terms and Conditions for using the Student Market Place prototype.">
+  <meta name="theme-color" content="#082744">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/services.js" defer></script>
+</head>
+<body data-page="terms">
+  <div id="app-header"></div>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Terms &amp; Conditions</span></nav>
+        <h1>Terms &amp; Conditions</h1>
+        <p>Please read these terms before buying or selling on Student Market Place.</p>
+      </div>
+    </section>
+
+    <div class="container page">
+      <article class="card card-pad prose">
+        <div class="alert alert-warning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10.3 3.9 2.4 17.5A2 2 0 0 0 4.1 20.5h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9.5v4M12 17h.01"/></svg>
+          <div><strong>Student prototype</strong><p>This is a student marketplace prototype created for an academic project. It is not an official Tshwane University of Technology service, and no real payments are processed.</p></div>
+        </div>
+
+        <h2>1. Who may use the marketplace</h2>
+        <p>Student Market Place is only for registered students of Tshwane University of Technology. You must register with your official <strong>@tut4life.ac.za</strong> student email address and keep your login details private.</p>
+
+        <h2>2. Responsibility for transactions</h2>
+        <ul>
+          <li>Users are responsible for their own transactions. Student Market Place only connects buyers and sellers.</li>
+          <li>Buyer and seller must agree on the price, payment method and collection point themselves.</li>
+          <li>Users should verify products before payment – inspect the item in person and make sure it matches the listing.</li>
+          <li>Avoid sending money before confirming the seller and the item.</li>
+        </ul>
+
+        <h2>3. Prohibited listings</h2>
+        <p>Prohibited or illegal products may not be listed. This includes, but is not limited to:</p>
+        <ul>
+          <li>Weapons, drugs, alcohol, tobacco or any illegal substances</li>
+          <li>Stolen, counterfeit or pirated goods (including copied software or exam papers)</li>
+          <li>Academic dishonesty services such as writing assignments or tests for others</li>
+          <li>Adult content or anything offensive or discriminatory</li>
+        </ul>
+
+        <h2>4. Respectful behaviour</h2>
+        <p>Users must behave respectfully. Harassment, threats, hate speech, spam or scams will result in removal from the platform. Keep communication inside the marketplace inbox wherever possible.</p>
+
+        <h2>5. Reporting</h2>
+        <p>Fake listings, scams, inappropriate products or incorrect information can be reported using the <strong>Report listing</strong> button on any item. Reports are reviewed by the platform team.</p>
+
+        <h2>6. Ratings and reviews</h2>
+        <p>Reviews must be honest and based on a real transaction. Ratings range from 1 to 5 stars and are shown publicly on seller profiles.</p>
+
+        <h2>7. Privacy</h2>
+        <p>Your email address and student number are never shown publicly. Other students only see your first name, surname initial, campus, listings and reviews.</p>
+
+        <h2>8. Prototype limitations</h2>
+        <p>In this prototype, all data is stored in your own web browser (localStorage). It is not shared with other devices and is not secure enough for real personal information. A production version would require a secure server, database and verified authentication.</p>
+
+        <p class="small muted mt-32 mb-0">Contact: support@studentmarketplace.demo · Last updated <span id="terms-date"></span></p>
+      </article>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+  <script>
+    document.getElementById("terms-date").textContent = new Date().toLocaleDateString("en-ZA", { month: "long", year: "numeric" });
+  </script>
+</body>
+</html>

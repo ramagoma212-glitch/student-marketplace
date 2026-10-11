@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sell an Item | Student Market Place</title>
+  <meta name="description" content="List an item for sale to TUT students on Student Market Place.">
+  <meta name="theme-color" content="#082744">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/sell.js" defer></script>
+</head>
+<body data-page="sell" data-auth="required">
+  <div id="app-header"></div>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="dashboard.html">Dashboard</a><span aria-hidden="true">/</span><span aria-current="page" id="crumb">Sell an Item</span></nav>
+        <h1 id="page-title">Sell an Item</h1>
+        <p id="page-lead">Create a listing in a few steps. Fields marked * are required.</p>
+      </div>
+    </section>
+
+    <div class="container page">
+      <div id="sell-root">
+        <div class="sell-layout">
+          <form id="sell-form" novalidate>
+            <div id="form-alert" aria-live="assertive"></div>
+
+            <section class="card form-section" aria-labelledby="s1">
+              <div class="form-section-head"><span class="fs-num">1</span><div><h2 id="s1">Product information</h2><p>What are you selling?</p></div></div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="title">Product title *</label>
+                  <input class="input" id="title" type="text" maxlength="80" placeholder="e.g. Casio fx-991ZA Plus calculator">
+                  <div class="char-count"><span id="title-count">0</span>/80</div>
+                </div>
+                <div class="field">
+                  <label for="category">Category *</label>
+                  <select class="select" id="category"><option value="">Choose a category</option></select>
+                </div>
+                <div class="field">
+                  <label for="description">Description *</label>
+                  <textarea class="textarea" id="description" maxlength="600" placeholder="Describe the item: age, condition, what's included, reason for selling…"></textarea>
+                  <div class="char-count"><span id="desc-count">0</span>/600</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="card form-section" aria-labelledby="s2">
+              <div class="form-section-head"><span class="fs-num">2</span><div><h2 id="s2">Pricing &amp; condition</h2><p>Set a fair student price in Rand.</p></div></div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="price">Price (ZAR) *</label>
+                  <div class="input-prefix"><span>R</span><input class="input" id="price" type="number" min="1" step="1" inputmode="numeric" placeholder="0"></div>
+                </div>
+                <fieldset class="field" style="border:0;padding:0;margin:0" id="condition-field">
+                  <legend class="label" style="margin-bottom:8px">Condition *</legend>
+                  <div class="option-cards" id="condition-options"></div>
+                </fieldset>
+              </div>
+            </section>
+
+            <section class="card form-section" aria-labelledby="s3">
+              <div class="form-section-head"><span class="fs-num">3</span><div><h2 id="s3">Location &amp; contact</h2><p>Where can buyers collect the item?</p></div></div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="campus">Campus / collection area *</label>
+                  <select class="select" id="campus"><option value="">Choose a campus</option></select>
+                </div>
+                <div class="field">
+                  <label for="contact">Contact preference *</label>
+                  <select class="select" id="contact"></select>
+                </div>
+              </div>
+            </section>
+
+            <section class="card form-section" aria-labelledby="s4">
+              <div class="form-section-head"><span class="fs-num">4</span><div><h2 id="s4">Images</h2><p>Clear photos help your item sell faster.</p></div></div>
+              <div class="field">
+                <label class="dropzone" id="dropzone" for="image">
+                  <input id="image" type="file" accept="image/png, image/jpeg, image/webp, image/gif">
+                  <span class="dz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4M7 9l5-5 5 5"/><path d="M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg></span>
+                  <strong>Drag &amp; drop a photo, or click to upload</strong>
+                  <span class="small muted">JPG, PNG or WEBP · max 5MB · optional (a category illustration is used if you skip this)</span>
+                </label>
+                <div id="upload-preview"></div>
+              </div>
+            </section>
+
+            <div class="row row-wrap mt-24">
+              <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">Publish listing</button>
+              <a class="btn btn-ghost btn-lg" href="dashboard.html#listings">Cancel</a>
+            </div>
+          </form>
+
+          <aside class="preview-sticky" aria-label="Listing preview">
+            <div class="preview-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Live preview</div>
+            <div id="preview-card"></div>
+            <div class="alert mt-16 small"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><p>Prohibited or illegal items are not allowed. See the <a href="terms.html">Terms &amp; Conditions</a>.</p></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

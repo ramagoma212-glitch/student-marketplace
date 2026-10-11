@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Overview | Student Market Place</title>
+  <meta name="description" content="Academic project overview for Student Market Place: problem, solution, system design, financial projection, research and team.">
+  <meta name="theme-color" content="#082744">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/project.js" defer></script>
+</head>
+<body data-page="project">
+  <div id="app-header"></div>
+
+  <main id="main">
+    <!-- Overview -->
+    <section class="project-hero" id="overview">
+      <div class="container project-hero-inner">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="about.html">About</a><span aria-hidden="true">/</span><span aria-current="page">Project Overview</span></nav>
+          <img class="page-logo" src="assets/images/logo.png" alt="Student Marketplace – Buy. Sell. Save." width="419" height="400">
+          <span class="eyebrow">Academic project · Code &amp; Canvas · Phase 1</span>
+          <h1>Student Market Place – Project Overview</h1>
+          <p class="hero-lead">Student Market Place is a digital platform designed to allow students to buy, sell and exchange goods and services within their institution.</p>
+          <ul class="aim-list" id="aim-list"></ul>
+        </div>
+        <figure class="project-photo">
+          <img src="assets/images/students-collaborating.jpg" alt="Students working together around a laptop on campus" width="1100" height="1375">
+          <figcaption>Image from the team's project presentation.</figcaption>
+        </figure>
+      </div>
+      <div class="container">
+        <nav class="jump-nav" aria-label="On this page">
+          <a href="#problem">Problem &amp; solution</a>
+          <a href="#features">Main features</a>
+          <a href="#how-it-works">How the system works</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#financials">Financial overview</a>
+          <a href="#research">Research</a>
+          <a href="#analytics">Prototype analytics</a>
+          <a href="#team">Project team</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Problem & solution -->
+    <section class="section-sm" id="problem">
+      <div class="container grid grid-2" style="align-items:stretch">
+        <div class="card card-pad">
+          <span class="eyebrow" style="background:var(--danger-bg);color:var(--danger)">The problem</span>
+          <h2 style="font-size:1.35rem">Essentials are expensive – and unused items go to waste</h2>
+          <p class="muted mb-0">Students often struggle with the high cost of textbooks, laptops, clothing, furniture and other essential items, while other students own unused items they could sell. General marketplaces are not designed around student communities, which makes it hard to trust buyers and sellers and to find local deals on campus.</p>
+        </div>
+        <div class="card card-pad">
+          <span class="eyebrow" style="background:var(--success-bg);color:var(--success)">Proposed solution</span>
+          <h2 style="font-size:1.35rem">A student-only, campus-focused marketplace</h2>
+          <p class="muted mb-0">A website where students register with their TUT student email, list products or services, browse and search listings, message sellers directly, confirm purchases and review sellers. Categories include textbooks, electronics, accommodation, clothing and student services.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section-sm" id="features">
+      <div class="container">
+        <div class="section-head"><div><h2>Main features</h2><p>Each feature can be demonstrated in this prototype.</p></div></div>
+        <div class="grid grid-3" id="feature-grid"></div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section-sm" id="how-it-works">
+      <div class="container">
+        <div class="section-head"><div><h2>How the system works</h2><p>The system flowchart and IPO table from the project design, mapped to the website.</p></div></div>
+        <div class="card card-pad">
+          <div class="flowchart" id="flowchart"></div>
+        </div>
+        <div class="card mt-24">
+          <div class="card-head"><h3>IPO table – Input · Processing · Output</h3><span class="badge badge-neutral">js/services.js</span></div>
+          <div class="table-wrap"><table class="data-table" id="ipo-table"></table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section-sm" id="benefits">
+      <div class="container">
+        <div class="section-head"><div><h2>Project benefits</h2><p>Affordability, safety, easy communication and student community.</p></div></div>
+        <div class="grid grid-4" id="benefit-grid"></div>
+      </div>
+    </section>
+
+    <!-- Financials -->
+    <section class="section-sm" id="financials">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Prototype Financial Overview</h2><p>Estimates from the team's financial computations. These are projections, not realised business results.</p></div>
+          <span class="badge badge-warning">Year 1 Project Projection</span>
+        </div>
+        <div class="grid grid-4" id="finance-cards"></div>
+        <div class="grid grid-3 mt-24" style="align-items:start">
+          <div class="card">
+            <div class="card-head"><h3>Projected cash flow (Year 1)</h3></div>
+            <table class="data-table" id="cashflow-table"></table>
+          </div>
+          <div class="card card-pad">
+            <h3>Projected benefits</h3>
+            <ul class="tip-list" id="benefit-list"></ul>
+          </div>
+          <div class="card card-pad">
+            <h3>Projected costs</h3>
+            <ul class="tip-list" id="cost-list"></ul>
+          </div>
+        </div>
+        <p class="small muted mt-16 mb-0" id="finance-note"></p>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="section-sm" id="research">
+      <div class="container">
+        <div class="section-head"><div><h2>Research Behind the Project</h2><p>The team reviewed existing marketplace and retail platforms used in South Africa and identified an opportunity for a student-specific, campus-focused marketplace.</p></div></div>
+        <div class="card">
+          <div class="table-wrap"><table class="data-table" id="research-table"></table></div>
+        </div>
+        <div class="card card-pad mt-24">
+          <h3>Differentiators demonstrated in this prototype</h3>
+          <div class="chip-list" id="differentiators"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analytics -->
+    <section class="section-sm" id="analytics">
+      <div class="container">
+        <div class="section-head"><div><h2>Prototype analytics</h2><p>The project variables, calculated live from the data stored in this browser.</p></div><span class="badge badge-neutral">Live · localStorage</span></div>
+        <div class="grid grid-4" id="analytics-cards"></div>
+        <div class="card card-pad mt-24">
+          <h3>Project parameters</h3>
+          <div class="param-grid" id="parameters"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section-sm" id="team">
+      <div class="container">
+        <div class="section-head"><div><h2>Project team</h2><p>Code &amp; Canvas – Tshwane University of Technology students.</p></div></div>
+        <div class="team-grid" id="team-grid"></div>
+      </div>
+    </section>
+
+    <!-- Scope -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="alert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+          <div><strong>About this prototype</strong><p>This website is the web prototype component of the project, built with HTML, CSS and JavaScript only. Data is stored in the browser (localStorage) and no real payments or email verification take place. The project's Java implementation phase is a separate deliverable. Student Market Place is not an official service of, or endorsed by, Tshwane University of Technology.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

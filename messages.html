@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Messages | Student Market Place</title>
+  <meta name="description" content="Your Student Market Place inbox – chat with buyers and sellers about listings.">
+  <meta name="theme-color" content="#082744">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/messages.js" defer></script>
+</head>
+<body data-page="messages" data-auth="required">
+  <div id="app-header"></div>
+
+  <main id="main" class="container messages-page">
+    <div class="inbox" id="inbox">
+      <aside class="inbox-sidebar" aria-label="Conversations">
+        <div class="inbox-sidebar-head">
+          <h1>Messages <span class="badge" id="inbox-unread" hidden></span></h1>
+          <label for="convo-search" class="sr-only">Search conversations</label>
+          <div class="input-group">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input class="input" id="convo-search" type="search" placeholder="Search conversations">
+          </div>
+        </div>
+        <div class="convo-list" id="convo-list" role="list"></div>
+      </aside>
+      <section class="chat" id="chat" aria-label="Conversation"></section>
+    </div>
+  </main>
+</body>
+</html>

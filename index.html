@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Market Place – Buy. Sell. Save. | TUT Campus Marketplace</title>
+  <meta name="description" content="Student Market Place is a campus marketplace where verified Tshwane University of Technology students buy, sell and exchange affordable items and services.">
+  <meta name="theme-color" content="#082744">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body data-page="home">
+  <div id="app-header"></div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <img class="hero-logo" src="assets/images/logo.png" alt="Student Marketplace – Buy. Sell. Save." width="419" height="400">
+          <span class="eyebrow" id="hero-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg>For verified TUT students only</span>
+          <h1>Your Campus <span class="accent">Marketplace.</span></h1>
+          <p class="hero-lead">Buy, sell and connect with verified TUT students. Find affordable textbooks, tech and res essentials – and earn extra income from things you no longer need.</p>
+
+          <form class="hero-search" id="hero-search" role="search" novalidate>
+            <div class="hs-input">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <label for="hero-q" class="sr-only">What are you looking for?</label>
+              <input id="hero-q" type="search" placeholder="What are you looking for?" autocomplete="off">
+            </div>
+            <label for="hero-cat" class="sr-only">Category</label>
+            <select id="hero-cat" class="select">
+              <option value="">All categories</option>
+            </select>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+          <div class="hero-search-msg" id="hero-search-msg" aria-live="polite"></div>
+
+          <div class="hero-ctas">
+            <a class="btn btn-blue btn-lg" href="marketplace.html">Browse Marketplace</a>
+            <a class="btn btn-outline btn-lg" href="sell.html">Sell an Item</a>
+          </div>
+
+          <div class="hero-stats" id="hero-stats" aria-label="Marketplace statistics"></div>
+        </div>
+
+        <div class="hero-visual" id="hero-visual" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Trust bar -->
+    <section class="trust-bar" aria-label="Why students trust Student Market Place">
+      <div class="container trust-inner" id="trust-bar"></div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Shop by category</h2>
+            <p>Everything a TUT student needs, from first-year textbooks to a fridge for res.</p>
+          </div>
+          <a class="link-arrow" href="marketplace.html">View all items <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+      </div>
+    </section>
+
+    <!-- Featured listings -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Fresh on campus</h2>
+            <p>The latest items listed by students across TUT campuses.</p>
+          </div>
+          <a class="link-arrow" href="marketplace.html?sort=newest">See all listings <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="product-grid" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>How it works</h2>
+            <p>From sign-up to collection in four simple steps.</p>
+          </div>
+        </div>
+        <div class="steps" id="steps"></div>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="section section-white" id="safety">
+      <div class="container safety-wrap">
+        <div class="safety-panel">
+          <span class="eyebrow">Trade safely</span>
+          <h2>Built for trust between students</h2>
+          <p>Only students with an official <strong style="color:#fff">@tut4life.ac.za</strong> email can register. Every seller has a public rating, and suspicious listings can be reported with one click.</p>
+          <a class="btn btn-white mt-16" href="terms.html">Read our marketplace rules</a>
+        </div>
+        <div class="safety-list" id="safety-list"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Got something you no longer need?</h2>
+            <p>List it in under a minute and reach thousands of TUT students on your campus.</p>
+          </div>
+          <div class="row row-wrap">
+            <a class="btn btn-white btn-lg" href="sell.html">Sell an Item</a>
+            <a class="btn btn-on-dark btn-lg" href="register.html" id="cta-register">Create free account</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

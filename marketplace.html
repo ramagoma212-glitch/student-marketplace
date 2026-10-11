@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marketplace | Student Market Place</title>
+  <meta name="description" content="Browse items for sale by verified TUT students: textbooks, electronics, furniture, accommodation and student services.">
+  <meta name="theme-color" content="#082744">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/marketplace.js" defer></script>
+</head>
+<body data-page="marketplace">
+  <div id="app-header"></div>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Marketplace</span></nav>
+        <h1>Marketplace</h1>
+        <p id="results-summary">Browse items listed by verified TUT students.</p>
+
+        <form class="market-toolbar" id="search-form" role="search" novalidate>
+          <div class="search-box">
+            <div class="input-group">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <label for="q" class="sr-only">Search by product name or keyword</label>
+              <input class="input" id="q" type="search" placeholder="Search textbooks, laptops, tutoring…" autocomplete="off">
+            </div>
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+          <button class="btn btn-outline filter-toggle" type="button" id="filter-toggle" aria-controls="filters" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+            Filters <span class="badge" id="filter-count" hidden></span>
+          </button>
+          <label for="sort" class="sr-only">Sort by</label>
+          <select class="select" id="sort">
+            <option value="newest">Sort: Newest first</option>
+            <option value="price-asc">Price: Low to high</option>
+            <option value="price-desc">Price: High to low</option>
+          </select>
+        </form>
+        <div id="search-hint" class="hint mt-8" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div class="container page">
+      <div class="market-layout">
+        <aside class="card filters" id="filters" aria-label="Filters">
+          <div class="drawer-head">
+            <h2>Filters</h2>
+            <button type="button" class="icon-btn" id="filters-close" aria-label="Close filters">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <div class="card-head"><h2>Filters</h2><button type="button" class="btn btn-ghost btn-sm" data-clear>Clear all</button></div>
+          <div class="card-body">
+            <div class="filter-group">
+              <h3 id="cat-heading">Category</h3>
+              <div class="radio-list" role="radiogroup" aria-labelledby="cat-heading" id="category-filter"></div>
+            </div>
+            <div class="filter-group">
+              <h3>Price (Rand)</h3>
+              <div class="price-range">
+                <div class="input-prefix"><span>R</span><label for="min-price" class="sr-only">Minimum price</label><input class="input" id="min-price" type="number" min="0" inputmode="numeric" placeholder="Min"></div>
+                <div class="input-prefix"><span>R</span><label for="max-price" class="sr-only">Maximum price</label><input class="input" id="max-price" type="number" min="0" inputmode="numeric" placeholder="Max"></div>
+              </div>
+              <div class="field-msg error mt-8" id="price-error" hidden></div>
+            </div>
+            <div class="filter-group">
+              <h3 id="cond-heading">Condition</h3>
+              <div class="chip-list" role="group" aria-labelledby="cond-heading" id="condition-filter"></div>
+            </div>
+            <div class="filter-group">
+              <h3><label for="campus">Campus</label></h3>
+              <select class="select" id="campus"><option value="">All campuses</option></select>
+            </div>
+            <div class="filter-group">
+              <label class="checkbox"><input type="checkbox" id="show-sold"> <span>Show sold items</span></label>
+            </div>
+            <button type="button" class="btn btn-outline btn-block" data-clear>Clear filters</button>
+          </div>
+        </aside>
+
+        <section aria-labelledby="results-heading">
+          <div class="results-bar">
+            <h2 class="sr-only" id="results-heading">Results</h2>
+            <span class="count" id="result-count" aria-live="polite"></span>
+            <div class="active-filters" id="active-filters"></div>
+          </div>
+          <div class="product-grid" id="product-grid"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

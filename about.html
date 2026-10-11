@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About the project | Student Market Place</title>
+  <meta name="description" content="About Student Market Place – a digital platform for TUT students to buy, sell and exchange products and services.">
+  <meta name="theme-color" content="#082744">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/services.js" defer></script>
+  <script src="js/about.js" defer></script>
+</head>
+<body data-page="about">
+  <div id="app-header"></div>
+
+  <main id="main">
+    <section class="about-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">About</span></nav>
+        <img class="page-logo" src="assets/images/logo.png" alt="Student Marketplace – Buy. Sell. Save." width="419" height="400">
+        <span class="eyebrow">Academic project · Code &amp; Canvas</span>
+        <h1 style="max-width:760px">A trusted marketplace made for TUT students</h1>
+        <p class="hero-lead" style="max-width:720px">Student Market Place is a digital platform designed to allow students to buy, sell and exchange goods and services within their institution.</p>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="section-head"><div><h2>Our aims</h2><p>What the platform sets out to achieve.</p></div></div>
+        <div class="grid grid-4" id="aims"></div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container grid grid-2" style="align-items:start">
+        <div class="card card-pad">
+          <h3>The problem</h3>
+          <p class="muted mb-0">Many students struggle to find affordable textbooks, laptops, clothing, furniture and other essentials. At the same time, other students have items they no longer use but have no simple and safe way to sell them. Existing online marketplaces are not designed specifically for students, which makes it difficult to trust buyers and sellers.</p>
+        </div>
+        <div class="card card-pad">
+          <h3>Our solution</h3>
+          <p class="muted mb-0">A website where verified students create accounts, list products or services, browse items, contact sellers through an internal inbox and complete transactions safely. Only registered students with an official TUT email can join, creating a trusted environment supported by ratings, reviews and reporting.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <a class="card card-hover project-link" href="project.html">
+          <span class="aim-icon"><!--icon--></span>
+          <span class="grow"><strong>Project Overview</strong><span>System flow, IPO table, Year 1 financial projection, research and the project team.</span></span>
+          <span class="btn btn-primary">View project overview</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container grid grid-2" style="align-items:start">
+        <div class="card card-pad">
+          <h3>Contact information</h3>
+          <ul class="tip-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>support@studentmarketplace.demo (demo address)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Tshwane University of Technology, Pretoria, Gauteng</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Monday – Friday, 08:00 – 16:30</li>
+          </ul>
+          <p class="small muted mt-16 mb-0">Student Market Place is a student academic project and is not an official service of, or endorsed by, Tshwane University of Technology.</p>
+        </div>
+        <div class="card card-pad">
+          <h3>Presentation tools</h3>
+          <p class="muted">This prototype stores all data in your browser (localStorage). Reset it to restore the original demo listings, accounts and messages before a presentation.</p>
+          <button type="button" class="btn btn-danger-soft" id="reset-demo">Reset demo data</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>
