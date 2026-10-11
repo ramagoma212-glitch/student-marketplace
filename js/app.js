@@ -48,7 +48,7 @@ const App = (() => {
       return true;
     } catch (err) {
       // Usually means the browser storage quota is full (large images).
-      toast("Your browser storage is full. Try a smaller image or reset the demo data.", "error");
+      toast("Your browser storage is full. Try a smaller image.", "error");
       return false;
     }
   }
@@ -1020,15 +1020,14 @@ const App = (() => {
             <div>
               <h3>Contact</h3>
               <ul class="footer-contact">
-                <li>${icon("mapPin")}<span>Tshwane University of Technology, Pretoria, Gauteng</span></li>
-                <li>${icon("mail")}<span>support@studentmarketplace.demo</span></li>
+                <li>${icon("mapPin")}<span>Tshwane University of Technology, Polokwane Campus</span></li>
+                <li>${icon("mail")}<span>support@studentmarketplace</span></li>
                 <li>${icon("clock")}<span>Mon – Fri, 08:00 – 16:30</span></li>
               </ul>
             </div>
           </div>
           <div class="footer-bottom">
             <span>© ${year} Student Market Place · Code &amp; Canvas. Academic prototype for TUT students.</span>
-            <span>Not an official Tshwane University of Technology service.</span>
           </div>
         </div>
       </footer>`;

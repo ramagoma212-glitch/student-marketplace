@@ -173,7 +173,7 @@ App.ready(() => {
               title: "Check your TUT inbox",
               subtitle: `If an account exists for ${input.value.trim().toLowerCase()}, a password reset link would normally be sent to that TUT student email.`,
               iconName: "mail", iconType: "success",
-              body: `<div class="alert">${icon("info")}<div><strong>Demo prototype</strong><p>No email is actually sent because this static website has no email server. Use one of the demo accounts to log in.</p></div></div>`,
+              body: `<div class="alert">${icon("info")}<div><strong>Need to log in now?</strong><p>Use one of the test accounts shown on the login page.</p></div></div>`,
               actions: [{ label: "Back to login", className: "btn-primary" }]
             }), 220);
           }

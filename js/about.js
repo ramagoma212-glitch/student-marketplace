@@ -19,15 +19,15 @@ App.ready(() => {
 
   document.getElementById("reset-demo").addEventListener("click", () => {
     App.confirm({
-      title: "Reset all demo data?",
-      message: "All new accounts, listings, messages, purchases, reviews and reports in this browser will be removed and the original demo data restored.",
+      title: "Reset marketplace data?",
+      message: "All new accounts, listings, messages, purchases, reviews and reports in this browser will be removed and the original marketplace data restored.",
       confirmLabel: "Reset data",
       danger: true,
       iconName: "refresh"
     }).then(ok => {
       if (!ok) return;
       App.resetDemoData();
-      App.flash("Demo data has been reset.");
+      App.flash("Marketplace data has been reset.");
       window.location.href = "index.html";
     });
   });

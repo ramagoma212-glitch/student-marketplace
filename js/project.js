@@ -144,7 +144,7 @@ App.ready(() => {
     ["Website logo", `<img src="assets/images/logo.png" alt="Student Marketplace logo" style="height:56px;width:auto">`],
     ["Categories", CATEGORIES.map(c => c.name).join(", ")],
     ["Terms and Conditions", `<a href="terms.html">View Terms &amp; Conditions</a>`],
-    ["Contact information", "support@studentmarketplace.demo"]
+    ["Contact information", "support@studentmarketplace"]
   ].map(([k, v]) => `<div><span>${k}</span><strong>${v}</strong></div>`).join("");
 
   /* ----- Team ----- */
