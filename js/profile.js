@@ -57,7 +57,7 @@ App.ready(() => {
         </div>
         <div class="card card-pad">
           <h3>${icon("shieldCheck")} Verified TUT Student</h3>
-          <p class="muted mb-0">Student email validated: this account registered with an accepted <strong>@tut4life.ac.za</strong> address. (In this prototype the address format is checked; a live system would also send a confirmation email.) Contact details are kept private – use the marketplace inbox to get in touch.</p>
+          <p class="muted mb-0">Student email validated: this account registered with an accepted <strong>@tut4life.ac.za</strong> address. Contact details are kept private – use the marketplace inbox to get in touch.</p>
         </div>
       </div>`;
     }

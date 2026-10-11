@@ -188,7 +188,7 @@ App.ready(() => {
       <div><strong>${s.averageRating.toFixed(1)} ★</strong><span>Avg marketplace rating</span></div>
       <div><strong>${money(Math.round(s.averagePrice))}</strong><span>Average listing price</span></div>
     </div>
-    <p class="small muted" style="padding:12px 22px 16px;margin:0;border-top:1px solid var(--border-2)">Sales today: <strong>${s.dailySales}</strong> · Calculated live from this browser's prototype data.</p>`;
+    <p class="small muted" style="padding:12px 22px 16px;margin:0;border-top:1px solid var(--border-2)">Sales today: <strong>${s.dailySales}</strong> · Calculated live from marketplace data.</p>`;
   }
 
   /* ---------- My listings ---------- */

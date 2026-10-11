@@ -111,7 +111,7 @@ App.ready(() => {
     <tr class="total"><td>Net cash flow</td><td class="num">${money(fin.netCashFlow)}</td></tr></tbody>`;
   $("benefit-list").innerHTML = PROJECT_FINANCIALS.benefits.map(b => `<li>${icon("check")}${esc(b)}</li>`).join("");
   $("cost-list").innerHTML = PROJECT_FINANCIALS.costs.map(c => `<li>${icon("coins")}${esc(c)}</li>`).join("");
-  $("finance-note").textContent = `Calculated in JavaScript: profit = ${money(fin.projectedRevenue)} − ${money(fin.startupCost)} = ${money(fin.projectedProfit)}; margin = ${money(fin.projectedProfit)} ÷ ${money(fin.projectedRevenue)} ≈ ${fin.profitMargin}%. The prototype itself does not charge fees or process payments.`;
+  $("finance-note").textContent = `Calculated in JavaScript: profit = ${money(fin.projectedRevenue)} − ${money(fin.startupCost)} = ${money(fin.projectedProfit)}; margin = ${money(fin.projectedProfit)} ÷ ${money(fin.projectedRevenue)} ≈ ${fin.profitMargin}%. The website does not currently charge fees or process payments.`;
 
   /* ----- Research ----- */
   $("research-table").innerHTML = `<thead><tr><th>Platform</th><th>What it does well</th><th>Gap for TUT students</th></tr></thead>

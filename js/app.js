@@ -1027,7 +1027,7 @@ const App = (() => {
             </div>
           </div>
           <div class="footer-bottom">
-            <span>© ${year} Student Market Place · Code &amp; Canvas. Academic prototype for TUT students.</span>
+            <span>© ${year} Student Market Place · Code &amp; Canvas.</span>
           </div>
         </div>
       </footer>`;
